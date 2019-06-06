@@ -8,21 +8,22 @@ const OfficesPage = (props) =>{
     
     const officesDivClass = (props.view === 'list' || props.view === 'grid') ? ((props.view === 'list') ?'officesDiv' : 'officesDivGrid') : 'mapDiv';
     
-    
-    
         return(
 
             <div className={officesDivClass}>
-                {(props.view === 'list' || props.view === 'grid') ? ((props.view === 'list') ? props.officesData.map((office, i) =>{return <OfficeListItem key={i} officeData={office}/>}) : props.officesData.map((office, i) =>{
-                        return <OfficeGridItem  key={i} officeData={office}/>
+
+                {(props.view === 'list' || props.view === 'grid') ? 
+                    ((props.view === 'list') ? 
+                        props.officesData.map((office, i) =>
+                            {return <OfficeListItem key={i} officeData={office}/>}) : 
+                        props.officesData.map((office, i) =>
+                            {return <OfficeGridItem  key={i} officeData={office}/>
                     })
                 ) : <MapPage officesData={props.officesData} />}
                 
-                
             </div>
+
         )
-    
-        
     
 }
 

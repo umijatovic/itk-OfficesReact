@@ -1,7 +1,7 @@
 import React from 'react';
 import './officeListItem.scss';
 
- const OfficeListItem = (props) => {
+const OfficeListItem = (props) => {
 
     const office = props.officeData;
 
@@ -9,7 +9,7 @@ import './officeListItem.scss';
 
         <div className='officeListItem'>
 
-            {(office.photo) ?  <img src={office.photo} alt=""/> : <p className='logoPic'>{office.name.charAt(0).toUpperCase()} </p>} 
+            {(office.photo) ?  <img src={office.photo} alt={office.description}/> : <p className='logoPic'>{office.name.charAt(0).toUpperCase()} </p>} 
             
             <div>
 

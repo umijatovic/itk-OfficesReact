@@ -8,5 +8,6 @@ export default class Office{
         this.latitude = latitude;
         this.longitude = longitude;
         this.photo = photo;
+        
     }
 }

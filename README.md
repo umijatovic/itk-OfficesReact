@@ -1,3 +1,8 @@
+Offices Project
+
+This single page application is about Itekako offices all around the world. On the Home page you have list of all offices and you can change the view from list to grid vice versa by clicking buttons in top of the page. You also have map button onto the top of the page and by the clicking on it you can see the map with offices location pinned on the map. If you click on pins popup box with information about that offis will be shown.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
