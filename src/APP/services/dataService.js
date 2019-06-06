@@ -8,10 +8,13 @@ class DataService{
 
         return axios.get(URL)
                     .then(response => {
+
                         const officesData = response.data;
+
                         return officesData.map(office => {
                             return new Office(office.id, office.name, office.description, office.latitude, office.longitude, office.photo)
                         })
+
                     })
     }
 }

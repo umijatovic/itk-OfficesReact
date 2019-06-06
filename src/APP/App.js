@@ -41,43 +41,37 @@ class App extends React.Component{
 
   }
 
- listViewHandler = () =>{
+  listViewHandler = () =>{
 
-  this.setState({
+    this.setState({
+      view: 'list'
+    })
+  }
 
-    view: 'list'
+  mapViewHandler = () =>{
 
-  })
-}
+    this.setState({
+      view: 'map'
+    })
+  }
 
-mapViewHandler = () =>{
-
-  this.setState({
-
-    view: 'map'
-  })
-}
-
- componentDidMount(){
-  this.loadOffices();
-}
+  componentDidMount(){
+    this.loadOffices();
+  }
 
   render(){
 
-    return (
+      return (
 
-      <div className="App">
+        <div className="App">
 
-      <Header view={this.state.view} handleClick={this.listViewHandler} handleClick1={this.gridViewHandler} handleClick2={this.mapViewHandler}/> 
-      
-        
-        {(this.state.loading) ? <Animation/> : <OfficesPage view={this.state.view} officesData={this.state.offices} />}
-        
-        
+          <Header view={this.state.view} handleClick={this.listViewHandler} handleClick1={this.gridViewHandler} handleClick2={this.mapViewHandler}/> 
+          {(this.state.loading) ? <Animation/> : <OfficesPage view={this.state.view} officesData={this.state.offices} />}
 
-    </div>
-  );
-    }
+        </div>
+
+      );
+  }
 }
 
 export default App;

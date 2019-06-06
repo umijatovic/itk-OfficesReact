@@ -54,7 +54,7 @@ a{
 }
 
 .logoPic{
-	width: 50px;
+	width: 63px;
 	border-radius: 50%;
 	height: 50px;
 	background-color: #CCCCCC;
@@ -62,6 +62,10 @@ a{
 	box-sizing: border-box;
 	padding-top: 17px;
 	font-weight: 800;
-	margin-right: 10px;
 }
 
+@media only screen and (min-width: 600px){
+	.logoPic{
+		width: 50px;
+	}
+}
